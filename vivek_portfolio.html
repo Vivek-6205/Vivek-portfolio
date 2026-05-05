@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vivek - Portfolio</title>
+  <meta name="description" content="Vivek Kumar — B.Tech student | DevOps • AWS • Blockchain • Prompt Engineering" />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --glass: rgba(255,255,255,0.04);
+      --fw-sans: 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:var(--fw-sans);background:linear-gradient(180deg,#071025 0%, #071827 100%);color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    .container{max-width:1100px;margin:36px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:64px;height:64px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,#052433,#07384a);font-weight:700}
+    .brand h1{font-size:18px;margin:0}
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:8px;font-weight:600}
+    .cta{background:var(--accent);color:#042024;padding:9px 14px;border-radius:10px;font-weight:700}
+
+    main{margin-top:28px}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:14px;box-shadow:0 6px 18px rgba(5,10,20,0.6);border:1px solid rgba(255,255,255,0.03)}
+
+    .intro h2{margin:0 0 8px 0;font-size:28px}
+    .intro p{margin:0;color:var(--muted);line-height:1.6}
+    .badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .badge{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:700;color:var(--accent)}
+
+    .contact-card{display:flex;flex-direction:column;gap:10px}
+    .contact-row{display:flex;align-items:center;gap:10px}
+    .muted{color:var(--muted);font-size:14px}
+
+    section{margin-top:20px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .skills-list{display:flex;flex-direction:column;gap:8px}
+    .skill{display:flex;justify-content:space-between;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02)}
+
+    .projects{display:flex;flex-direction:column;gap:12px}
+    .project{display:flex;gap:12px;align-items:center}
+    .project .thumb{width:84px;height:64px;border-radius:8px;background:linear-gradient(90deg, rgba(6,182,212,0.12), rgba(6,182,212,0.06));display:grid;place-items:center;font-weight:700}
+
+    footer{margin:30px 0 60px 0;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:14px}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      nav{display:none}
+      .grid-3{grid-template-columns:1fr}
+      .avatar{width:52px;height:52px}
+    }
+
+    /* small utility */
+    .pill{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:700}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+    .muted-2{color:#9fb0c3}
+
+    /* contact form */
+    form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{min-height:110px}
+
+    /* subtle animations */
+    .fade-up{transform:translateY(10px);opacity:0;animation:fadeUp .6s ease forwards}
+    @keyframes fadeUp{to{transform:none;opacity:1}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">VK</div>
+        <div>
+          <h1>Vivek Kumar</h1>
+          <div class="muted">B.Tech student • Aspiring Cloud / DevOps / DevSecOps / -> Blockchain Engineer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro fade-up">
+          <h2>Hi — I'm Vivek. I build cloud-first, automated systems.</h2>
+          <p>I am a B.Tech student from Jharkhand, India. I focus on DevOps, AWS Cloud, Containerization (Docker), Orchestration (Kubernetes), and Blockchain fundamentals. I also study Network Security, Distributed Databases and AI-Artificial Intelligence — aiming to become a successful engineer and entrepreneur.</p>
+
+          <div class="badges">
+            <div class="badge">Linux</div>
+            <div class="badge">Shell Scripting - Bash</div>
+            <div class="badge">DevOps</div>
+            <div class="badge">AWS Cloud</div>
+            <div class="badge">Docker • K8s</div>
+            <div class="badge">Blockchain</div>
+            <div class="badge">Prompt Eng.</div>
+            <div class="badge">Python</div>
+            <div class="badge">Git/GitHub</div>
+            <div class="badge">Networking</div>
+          </div>
+
+          <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+            <a class="btn" href="https://mail.google.com/mail/u/1/#all?compose=CllgCJZZQlpgxgngMjZGmLBcMhvnkMLbccfZchdKVsTnfnbMBtcJZGQcQTvNzTPThxfmggcvCpL">Email Me</a>
+            <a class="btn" href="https://github.com/Vivek-6205">See Projects</a>
+            <a class="btn" href="https://www.linkedin.com/in/vivek-kumar-09v/" target="_blank">LinkedIn</a>
+          </div>
+
+          <div style="margin-top:18px" class="muted">Quick facts</div>
+          <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap">
+            <div class="pill">Location: Jharkhand, India</div>
+            <div class="pill">Degree: B.Tech - CSE (Ongoing)</div>
+            <div class="pill">Status: Looking  for Opportunities</div>
+          </div>
+        </div>
+
+        <aside class="card contact-card fade-up">
+          <div>
+            <div class="muted">Contact</div>
+            <div style="font-weight:700;margin-top:6px">Email: vivekbaradih59@gmail.com</div>
+            <div class="muted">Call: +91 62051 91808</div>
+            <div style="margin-top:10px"><a href="https://www.linkedin.com/in/vivek-kumar-09v/" target="_blank">linkedin.com/in/vivek-kumar-09v</a></div>
+          </div>
+
+          <div style="border-top:1px dashed rgba(255,255,255,0.03);padding-top:10px;margin-top:8px">
+            <div class="muted">Availability</div>
+            <div style="font-weight:700;margin-top:6px">Open To Internships & Full Time Job Opportunities.</div>
+          </div>
+
+          <div style="border-top:1px dashed rgba(255,255,255,0.03);padding-top:10px;margin-top:8px">
+            <div class="muted">Download</div>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a class="btn" href="#Resumeview" onclick="downloadResume(event)">Resume (PDF)</a>
+              <a class="btn" href="#contact">Hire Me</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about" class="card fade-up">
+        <h3>About me</h3>
+        <p class="muted">I am pursuing a B.Tech (CSE) and preparing for a career in cloud engineering, DevOps and blockchain. I enjoy automation repetitive tasks, building CI/CD pipelines using GitHub Action, Jenkins , and designing reliable systems that scale. I also looking for Opportunities job roles related to my skills, while keeping hands-on with open-source tools. Don't forget to checkout my hands-on projects uploaded in my GitHub.</p>
+      </section>
+
+      <section id="skills" class="card fade-up">
+        <h3>Skills</h3>
+        <div class="grid-3" style="margin-top:12px">
+          <div>
+            <h4>Cloud & DevOps</h4>
+            <div class="skills-list">
+              <div class="skill"><div>AWS (EC2, S3, IAM, Lambda)</div><div class="muted">Foundation</div></div>
+              <div class="skill"><div>CI/CD (Jenkins, GitHub Actions)</div><div class="muted">Learning</div></div>
+              <div class="skill"><div>Docker & Kubernetes</div><div class="muted">Learning</div></div>
+            </div>
+          </div>
+
+          <div>
+            <h4>Security & Data</h4>
+            <div class="skills-list">
+              <div class="skill"><div>Network Security & Cryptography</div><div class="muted">Foundation</div></div>
+              <div class="skill"><div>Distributed Databases</div><div class="muted">Learning</div></div>
+              <div class="skill"><div>Linux • CLI </div><div class="muted">Comfortable</div></div>
+            </div>
+          </div>
+
+          <div>
+            <h4>Programming & Tools</h4>
+            <div class="skills-list">
+              <div class="skill"><div>Python • Shell Scripting - Bash</div><div class="muted">Comfortable</div></div>
+              <div class="skill"><div>Git/GitHub • IaC</div><div class="muted">Foundation</div></div>
+              <div class="skill"><div>Prompt Engineering</div><div class="muted">Beginner→Intermediate</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="card fade-up">
+        <h3>Selected Projects</h3>
+        <div class="projects" style="margin-top:12px">
+          <div class="project">
+            <div class="thumb">CI</div>
+            <div>
+              <div style="font-weight:700">CI/CD Pipeline for Web App</div>
+              <div class="muted">Built automated GitHub Actions pipeline: lint, test, build, and deploy to AWS EC2. Focus on repeatable deployments and fast rollback.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb">AWS</div>
+            <div>
+              <div style="font-weight:700">Serverless Image Processor (Lambda)</div>
+              <div class="muted">Python Lambda to resize & optimize images on upload to S3 using event triggers.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb">Chain</div>
+            <div>
+              <div style="font-weight:700">Blockchain Learning Lab</div>
+              <div class="muted">Study repo with smart contract examples and notes on fundamentals — deployed small contracts on testnets.</div>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="thumb">DB</div>
+            <div>
+              <div style="font-weight:700">Distributed DB Research</div>
+              <div class="muted">Seminar project on distributed databases and eventual consistency — includes diagrams and sample configs.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="card fade-up">
+        <h3>Contact</h3>
+        <p class="muted">Want to work together? Send a message or email me directly.</p>
+        <div style="display:flex;gap:18px;margin-top:12px;flex-wrap:wrap">
+          <form onsubmit="sendMail(event)" style="flex:1;min-width:260px">
+            <input name="name" placeholder="Your name" required />
+            <input name="email" placeholder="Your email" required />
+            <textarea name="message" placeholder="Brief message" required></textarea>
+            <div style="display:flex;gap:10px;align-items:center">
+              <button class="btn" type="submit" style="background:var(--accent);color:#042024">Send message</button>
+              <div class="muted-2">or email: <a href="https://mail.google.com/mail/u/1/#all?compose=CllgCJZZQlpgxgngMjZGmLBcMhvnkMLbccfZchdKVsTnfnbMBtcJZGQcQTvNzTPThxfmggcvCpL">vivekbaradih59@gmail.com</a></div>
+            </div>
+          </form>
+
+          <div style="min-width:240px;flex:0 0 280px">
+            <div class="muted">Other Links</div>
+            <ul style="margin-top:10px">
+              <li>LinkedIn: <a href="https://www.linkedin.com/in/vivek-kumar-09v/" target="_blank">linkedin.com/in/vivek-kumar-09v</a></li>
+              <li>Location: Jharkhand, India</li>
+              <li>Available for internships / Full time job role.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Vivek Kumar — Built with ❤️</div>
+      <div class="muted">Made for personal portfolio • Edit this file to customize</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple resume download (placeholder)
+    function downloadResume(e){
+      e.preventDefault();
+      // if you have a resume PDF hosted, replace URL here
+      window.open("https://drive.google.com/file/d/1G3OGW5ndCmazVWnF2j2eaVd2JYOKdUZ6/view?usp=sharing")
+    }
+
+    function sendMail(e){
+      e.preventDefault();
+      const form = e.target;
+      const name = encodeURIComponent(form.name.value.trim());
+      const email = encodeURIComponent(form.email.value.trim());
+      const message = encodeURIComponent(form.message.value.trim());
+      const subject = encodeURIComponent('Portfolio inquiry from ' + (form.name.value||'Someone'));
+      const body = encodeURIComponent('Name: '+form.name.value + '\nEmail: '+ form.email.value + '\n\nMessage:\n' + form.message.value);
+      // open user's mail client (no backend)
+      window.location.href = `mailto:vivekbaradih59@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // small animation trigger
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.fade-up').forEach((el,i)=>{ el.style.animationDelay = (i*120)+'ms'; });
+    });
+
+    // smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth',block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
